@@ -44,6 +44,6 @@ jobs:
 
       - name: Build and deploy docs with mike
         run: |
-          mkdocs gh-deploy --force -f mkdocs.yml
+          #mkdocs gh-deploy --force -f mkdocs.yml
           mike deploy 2.6.0 --push
           mike deploy --push --update-aliases 1.1.2 stable
