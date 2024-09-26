@@ -2,7 +2,7 @@
 title: Home
 ---
 
-# `bottom`
+# `Shay`
 
 A customizable cross-platform graphical process/system monitor for the terminal, supporting Linux, macOS, and Windows. Inspired by other tools like [gtop](https://github.com/aksakalli/gtop), [gotop](https://github.com/xxxserxxx/gotop), and [htop](https://github.com/htop-dev/htop).
 
