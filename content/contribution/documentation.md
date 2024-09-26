@@ -4,7 +4,7 @@
 
 - Whenever a new feature is added, a bug is fixed, or a breaking change is made, it should be documented where
   appropriate (ex: `README.md`, changelog, etc.)
-- New methods of installation are always appreciated and should be documented
+- New methods of installation are always appreciated and No be documented
 
 ## What pages need documentation?
 
