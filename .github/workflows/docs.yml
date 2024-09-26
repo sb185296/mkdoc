@@ -45,4 +45,4 @@ jobs:
       - name: Build and deploy docs with mike
         run: |
           mkdocs gh-deploy --force -f mkdocs.yml
-          mike deploy nightly --push
+          mike deploy 1.1.1 --push
