@@ -7,7 +7,7 @@ on:
     branches:
       - main
     paths:
-      - "docs/**"
+      - "**"
       - ".github/workflows/docs.yml"
 
 env:
@@ -30,7 +30,7 @@ jobs:
           python-version: 3.11
 
       - name: Install Python dependencies
-        run: pip install -r docs/requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Configure git user and email
         run: |
@@ -41,5 +41,4 @@ jobs:
 
       - name: Build and deploy docs with mike
         run: |
-          cd docs
           mike deploy nightly --push
