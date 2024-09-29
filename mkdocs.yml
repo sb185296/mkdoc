@@ -180,6 +180,7 @@ nav:
           - "Battery Widget": usage/widgets/battery.md
   - "Configuration":
       - "Command-line Options": configuration/command-line-options.md
+      - "Comsadtions": configuration/edge.md
       - "Config File":
           - configuration/config-file/index.md
           - "Flags": configuration/config-file/flags.md
