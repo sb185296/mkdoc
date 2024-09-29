@@ -1,0 +1,1892 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A customizable cross-platform graphical process/system monitor for the terminal. Supports Linux, macOS, and Windows.">
+      
+      
+        <meta name="author" content="Clement Tsang">
+      
+      
+        <link rel="canonical" href="https://clementtsang.github.io/bottom/stable/configuration/edge/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Overview - bottom</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.5be84a27.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="bottom" class="md-header__button md-logo" aria-label="bottom" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            bottom
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ClementTsang/bottom" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ClementTsang/bottom
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../support/official/" class="md-tabs__link">
+          
+  
+    
+  
+  Support
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../usage/general-usage/" class="md-tabs__link">
+          
+  
+    
+  
+  Usage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../command-line-options/" class="md-tabs__link">
+          
+  
+    
+  
+  Configuration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contribution/issues-and-pull-requests/" class="md-tabs__link">
+          
+  
+    
+  
+  Contribution
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../troubleshooting/" class="md-tabs__link">
+        
+  
+    
+  
+  Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="bottom" class="md-nav__button md-logo" aria-label="bottom" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    bottom
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ClementTsang/bottom" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ClementTsang/bottom
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/official/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Official Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/unofficial/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unofficial Support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/general-usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/basic-mode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Widgets
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Widgets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/widgets/cpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPU Widget
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/widgets/memory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Memory Widget
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/widgets/network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Widget
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/widgets/process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Process Widget
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/widgets/disk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Disk Widget
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/widgets/temperature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Temperature Widget
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/widgets/battery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Battery Widget
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command-line-options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command-line Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../config-file/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Config File
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Config File
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config-file/flags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flags
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config-file/styling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Styling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config-file/layout/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config-file/data-filtering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Filtering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config-file/processes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contribution
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Contribution
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution/issues-and-pull-requests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Issues, Pull Requests, and Discussions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution/documentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution/packaging-and-distribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Packaging and Distribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution/development/dev_env/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development Environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution/development/testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution/development/logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution/development/build_process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution/development/deploy_process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/ClementTsang/bottom/edit/main/docs/content/configuration/edge.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/ClementTsang/bottom/raw/main/docs/content/configuration/edge.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="overview"><a class="toclink" href="#overview">Overview</a></h1>
+<p>An Emerald Global Edge Setup consists of the following main building blocks:<br />
+The NCR Edge Management Console.<br />
+The NCR EDGE GCP Foreman Project.<br />
+An Edge Store Cluster - server (controlplance) and touchpoints (worker nodes).<br />
+An Emerald Global Managed HQ Services instance.<br />
+Emerald Global Charts deployed onto the Edge store cluster.  </p>
+<h1 id="i-dont-know-what-edge-is-where-do-i-start"><a class="toclink" href="#i-dont-know-what-edge-is-where-do-i-start">I don't know what Edge is - where do I start?</a></h1>
+<p>The <a href="https://docs.edge-infra.dev/edge/">edge wiki</a> would be a good place to start</p>
+<h1 id="i-dont-know-what-emerald-global-is-where-do-i-start"><a class="toclink" href="#i-dont-know-what-emerald-global-is-where-do-i-start">I don't know what Emerald Global is - where do I start?</a></h1>
+<p><a href="https://confluence.ncr.com/display/RED/Emerald+Global+Training+Sessions">Emerald Global Training Sessions</a></p>
+<h1 id="who-to-contact-when"><a class="toclink" href="#who-to-contact-when">Who to Contact When?</a></h1>
+<p>Managed Emerald Global HQ instances - contact the Emerald Global DevOps Team<br />
+Edge Onboarding and Support - the NCR Edge team<br />
+Client questions and issues (XLR, Devices) - The Emerald Global XLR Team <br />
+Server questions and issues - the Emerald Global Server Team<br />
+Helm chart and deployment questions and issues - the Emerald Global DevOps Team  </p>
+<h1 id="focal-points-and-communication-channels"><a class="toclink" href="#focal-points-and-communication-channels">Focal Points and Communication Channels</a></h1>
+<p>The Emerald Global DevOps Team - the <a href="https://ncr.enterprise.slack.com/archives/C05EVLHA8KE">#emeraldglobal-edge-support</a> slack channel<br />
+The Emerald Global XLR Team - <a href="https://confluence.ncr.com/display/~rz185035">Ronen Zeevi</a> <br />
+The Emerald Global Server Team -  <a href="https://confluence.ncr.com/display/~tg250098">Tomer Guri</a><br />
+Edge Support - onboarding questions can be raised in the <a href="https://ncr.enterprise.slack.com/archives/C01M0008P0E">#ncr-edge-onboarding</a> and issues in the <a href="https://ncr.enterprise.slack.com/archives/C020D3G8S2J">#ncr-edge-incidents</a> slack channel. For joining these (private) slack channels,<br />
+please reach out to <a href="https://confluence.ncr.com/display/~vm250200">Venkat Murali</a>  </p>
+<h1 id="perquisites"><a class="toclink" href="#perquisites">Perquisites</a></h1>
+<ol>
+<li>Need to allow edge connection by providing the <code>Control Plan</code> IP.<br />
+   a. login with ssh to <code>Control Plan</code> of edge store.<br />
+   b. run <code>curl https://ipinfo.io/ip</code><br />
+   c. copy the IP and send it in<br />
+<a href="https://ncr.enterprise.slack.com/archives/C05EVLHA8KE">#emeraldglobal-edge-support</a> slack channel </li>
+<li>In EDGE portal create <code>secret</code> for <code>emeraldgx</code> deployment.  </li>
+</ol>
+<h1 id="create-new-workload"><a class="toclink" href="#create-new-workload">Create new <code>Workload</code></a></h1>
+<ol>
+<li>In edge portal , enter your store name , e.g <code>gx-dev1</code>  </li>
+<li>Under <code>Workloads</code> tab , click on <code>new workload</code>. </li>
+</ol>
+<h2 id="store"><a class="toclink" href="#store">STORE</a></h2>
+<h3 id="app-details-screen"><a class="toclink" href="#app-details-screen">App details screen</a></h3>
+<ol>
+<li>Repository: <code>ncr-charts</code>. </li>
+<li>Helm Chart: <code>emerald-gx</code>  </li>
+<li>Chart Version: e.g <code>24.2.0</code></li>
+<li>App Name: <code>gx-store</code>. </li>
+<li>Namespace: <code>gx-store</code>. </li>
+<li>Config Map: <code>Edge config map</code></li>
+</ol>
+<h3 id="secrets-screen"><a class="toclink" href="#secrets-screen">Secrets screen</a></h3>
+<ol>
+<li>Select your STORE secret, e.g <code>emerald-demo-us-store-secrets</code></li>
+</ol>
+<h3 id="node-target-screen"><a class="toclink" href="#node-target-screen">Node target screen</a></h3>
+<ol>
+<li>Select <code>Server</code></li>
+</ol>
+<h3 id="date-and-time-screen"><a class="toclink" href="#date-and-time-screen">Date and time screen</a></h3>
+<ol>
+<li><code>Deploy immediately</code></li>
+</ol>
+<h3 id="default-valuesyaml"><a class="toclink" href="#default-valuesyaml">default values.yaml</a></h3>
+<h3 id="modify-values"><a class="toclink" href="#modify-values">Modify Values:</a></h3>
+<p><div class="highlight"><pre><span></span><code>serverType: store - When deploy STORE.  
+secretName: &lt;STORE_SECRET&gt;.  
+hqServerName: &lt;HQ_APP_ENDPOINT&gt; # [Standard] hq-demo-us.test.ncrsaas.com OR [Multi Tenants] emeraldgx-us.test.ncrsaas.com/server/demo.  
+dmsParentUrl: &lt;HQ_DMS_ENDPOINT&gt; # [Standard] https://dms-demo-us.test.ncrsaas.com OR [Multi Tenants] https://emeraldgx-us.test.ncrsaas.com/dms/demo.  
+rabbitParentServerName: &lt;HQ_RABBITMQ_ENDPOINT&gt; # rabbit-us.emeraldgx.test.ncrsaas.com.  
+rabbitParentVirtualHost: &quot;&lt;RABBITMQ_VIRTUAL_HOST&gt;&quot; # &quot;ncrdemo&quot; OR &quot;/&quot;.  
+url: &lt;HQ_NOTIFICATION_ENDPOINT&gt; # [Standard] https://notification-demo-us.test.ncrsaas.com OR [Multi Tenants] https://emeraldgx-us.test.ncrsaas.com/notification/demo.  
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>global:
+  serverType: store
+  namespace: gx-store 
+  secretName: &lt;STORE_SECRET&gt;
+  imagePullSecrets:
+  - name: edge-docker-pull-secret  
+  # nodeSelectors
+  # Used for targeting specific nodes based on their kubernetes labels nodeSelector: &quot;node.ncr.com/sub-class: xlr&quot;
+  nodeSelector: null
+
+emerald-gx:
+  hqServerName: &lt;HQ_APP_ENDPOINT&gt;
+  dmsParentUrl: &lt;HQ_DMS_ENDPOINT&gt;
+  rabbitParentServerName: &lt;HQ_RABBITMQ_ENDPOINT&gt;
+  rabbitParentVirtualHost: &quot;&lt;RABBITMQ_VIRTUAL_HOST&gt;&quot;
+  parentUrl: null
+# Multi Rabbit Enable section for Store level only
+  multiRabbitParentUpload:
+    enabled: false
+    rabbitParentServerName: null
+    rabbitParentVirtualHost: null
+  multiRabbitExternalRabbitExporter:
+    enabled: false
+    rabbitParentServerName: null
+    rabbitParentVirtualHost: null
+
+  selling:
+    modules:
+      enabledExternalModules: &quot;&quot;
+    logging:
+      level: Error
+
+  datasync:
+    logging:
+      level: Error
+    notification:
+      enabled: false
+      url: &lt;HQ_NOTIFICATION_ENDPOINT&gt;
+
+  emissaryIngress:
+    enabled: false
+</code></pre></div></p>
+<h2 id="pos"><a class="toclink" href="#pos">POS</a></h2>
+<ol>
+<li>In edge portal , enter your store name , e.g <code>gx-dev1</code>  </li>
+<li>Under <code>Workloads</code> tab , click on <code>new workload</code>. </li>
+</ol>
+<h3 id="app-details-screen_1"><a class="toclink" href="#app-details-screen_1">App details screen</a></h3>
+<ol>
+<li>Repository: <code>ncr-charts</code>. </li>
+<li>Helm Chart: <code>emerald-gx</code>  </li>
+<li>Chart Version: e.g <code>24.2.0</code></li>
+<li>App Name: <code>gx-pos</code>. </li>
+<li>Namespace: <code>gx-pos</code>. </li>
+<li>Config Map: <code>Edge config map</code></li>
+</ol>
+<h3 id="secrets-screen_1"><a class="toclink" href="#secrets-screen_1">Secrets screen</a></h3>
+<ol>
+<li>Select your POS secret, e.g <code>emerald-global-pos-secrets</code></li>
+</ol>
+<h3 id="node-target-screen_1"><a class="toclink" href="#node-target-screen_1">Node target screen</a></h3>
+<ol>
+<li>Select <code>Touchpoint</code></li>
+</ol>
+<h3 id="date-and-time-screen_1"><a class="toclink" href="#date-and-time-screen_1">Date and time screen</a></h3>
+<ol>
+<li><code>Deploy immediately</code></li>
+</ol>
+<h3 id="default-valuesyaml_1"><a class="toclink" href="#default-valuesyaml_1">default values.yaml</a></h3>
+<h3 id="modify-values_1"><a class="toclink" href="#modify-values_1">Modify Values:</a></h3>
+<p><div class="highlight"><pre><span></span><code>serverType: pos - When deploy POS.  
+secretName: &lt;POS_SECRET&gt; # e.g emerald-global-pos-secrets
+hqServerName: &lt;HQ_APP_ENDPOINT&gt; # [Standard] hq-demo-us.test.ncrsaas.com OR [Multi Tenants] emeraldgx-us.test.ncrsaas.com/server/demo.  
+url: &lt;HQ_NOTIFICATION_ENDPOINT&gt; # [Standard] https://notification-demo-us.test.ncrsaas.com OR [Multi Tenants] https://emeraldgx-us.test.ncrsaas.com/notification/demo.  
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>global:
+  serverType: pos
+  namespace: gx-pos 
+  secretName: &lt;POS_SECRET&gt; 
+  imagePullSecrets:
+  - name: edge-docker-pull-secret  
+  # nodeSelectors
+  # Used for targeting specific nodes based on their kubernetes labels nodeSelector: &quot;node.ncr.com/sub-class: xlr&quot;
+  nodeSelector: null
+
+emerald-gx:
+
+  hqServerName: &lt;HQ_APP_ENDPOINT&gt;
+  dmsParentUrl: &quot;http://gx-datasync.gx-store.svc.cluster.local:8085&quot;
+  rabbitParentServerName: rabbitmq.gx-store.svc.cluster.local
+  rabbitParentVirtualHost: &quot;/&quot;
+  parentUrl: http://gx-selling.gx-store.svc.cluster.local/storewebservices
+# Multi Rabbit Enable section for Store level only
+  multiRabbitParentUpload:
+    enabled: false
+    rabbitParentServerName: null
+    rabbitParentVirtualHost: null
+  multiRabbitExternalRabbitExporter:
+    enabled: false
+    rabbitParentServerName: null
+    rabbitParentVirtualHost: null
+
+  selling:
+    modules:
+      enabledExternalModules: &quot;&quot;
+    logging:
+      level: Error
+
+  datasync:
+    logging:
+      level: Error
+    notification:
+      enabled: true
+      url: &lt;HQ_NOTIFICATION_ENDPOINT&gt;
+
+  emissaryIngress:
+    enabled: false
+</code></pre></div></p>
+<h2 id="retail-emerald-desktop"><a class="toclink" href="#retail-emerald-desktop">retail-emerald-desktop</a></h2>
+<ol>
+<li>In edge portal , enter your store name , e.g <code>gx-dev1</code>  </li>
+<li>Under <code>Workloads</code> tab , click on <code>new workload</code>. </li>
+</ol>
+<h3 id="app-details-screen_2"><a class="toclink" href="#app-details-screen_2">App details screen</a></h3>
+<ol>
+<li>Repository: <code>ncr-charts</code>. </li>
+<li>Helm Chart: <code>emerald-gx-xlr</code>  </li>
+<li>Chart Version: e.g <code>24.2.0</code></li>
+<li>App Name: <code>retail-emerald-desktop</code>. </li>
+<li>Namespace: <code>retail-emerald-desktop</code>. </li>
+<li>Config Map: <code>Not Need</code></li>
+</ol>
+<h3 id="secrets-screen_2"><a class="toclink" href="#secrets-screen_2">Secrets screen</a></h3>
+<ol>
+<li><code>Not Need</code></li>
+</ol>
+<h3 id="node-target-screen_2"><a class="toclink" href="#node-target-screen_2">Node target screen</a></h3>
+<ol>
+<li>Select <code>Touchpoint</code></li>
+</ol>
+<h3 id="date-and-time-screen_2"><a class="toclink" href="#date-and-time-screen_2">Date and time screen</a></h3>
+<ol>
+<li><code>Deploy immediately</code></li>
+</ol>
+<h3 id="default-valuesyaml_2"><a class="toclink" href="#default-valuesyaml_2">default values.yaml</a></h3>
+<div class="highlight"><pre><span></span><code>global:
+  namespace: retail-emerald-desktop
+  # example for nodeSelector for xlr
+  # nodeSelector: &quot;node.ncr.com/hostname: s1-worker-1&quot;
+emerald-desktop-bff:
+  variables:
+    rtiUrl: http://gx-selling.gx-pos.svc.cluster.local/storewebservices
+</code></pre></div>
+<h2 id="emerald-touchpoint"><a class="toclink" href="#emerald-touchpoint">emerald-touchpoint</a></h2>
+<ol>
+<li>In edge portal , enter your store name , e.g <code>gx-dev1</code>  </li>
+<li>Under <code>Workloads</code> tab , click on <code>new workload</code>. </li>
+</ol>
+<h3 id="app-details-screen_3"><a class="toclink" href="#app-details-screen_3">App details screen</a></h3>
+<ol>
+<li>Repository: <code>ncr-charts</code>. </li>
+<li>Helm Chart: <code>emerald-gx-xlr-touchpoint</code>  </li>
+<li>Chart Version: e.g <code>24.2.0</code></li>
+<li>App Name: <code>emerald-touchpoint</code>. </li>
+<li>Namespace: <code>emerald-touchpoint</code>. </li>
+<li>Config Map: <code>Not Need</code></li>
+</ol>
+<h3 id="secrets-screen_3"><a class="toclink" href="#secrets-screen_3">Secrets screen</a></h3>
+<ol>
+<li><code>Not Need</code></li>
+</ol>
+<h3 id="node-target-screen_3"><a class="toclink" href="#node-target-screen_3">Node target screen</a></h3>
+<ol>
+<li>Select <code>Touchpoint</code></li>
+</ol>
+<h3 id="date-and-time-screen_3"><a class="toclink" href="#date-and-time-screen_3">Date and time screen</a></h3>
+<ol>
+<li><code>Deploy immediately</code></li>
+</ol>
+<h3 id="default-valuesyaml_3"><a class="toclink" href="#default-valuesyaml_3">default values.yaml</a></h3>
+<div class="highlight"><pre><span></span><code>global:
+  namespace: emerald-touchpoint
+  # used for targeting only some lanes, example for nodeSelector for xlr
+  # nodeSelector: &quot;node.ncr.com/hostname: s1-worker-1&quot;
+xlr-electron-ui:
+  variables:
+    electronThinAppUrl: &quot;http://retail-desktop-pos.retail-emerald-desktop/&quot;
+    apiHost: &quot;http://emerald-desktop-bff.retail-emerald-desktop&quot;
+    tz: &quot;UTC&quot;
+emerald-xlr-rps:
+  variables:
+    epsPort: 13000
+    epsServer: null
+</code></pre></div>
+<h2 id="coldstart"><a class="toclink" href="#coldstart">coldstart</a></h2>
+<ol>
+<li>In edge portal , enter your store name , e.g <code>gx-dev1</code>  </li>
+<li>Under <code>Workloads</code> tab , click on <code>new workload</code>. </li>
+</ol>
+<h3 id="app-details-screen_4"><a class="toclink" href="#app-details-screen_4">App details screen</a></h3>
+<ol>
+<li>Repository: <code>ncr-charts</code>. </li>
+<li>Helm Chart: <code>emerald-gx-utils</code>  </li>
+<li>Chart Version: e.g <code>1.0.0-beta.1</code></li>
+<li>App Name: <code>cs-&lt;STORE_OR_POS&gt;</code>. </li>
+<li>Namespace: <code>gx-&lt;STORE_OR_POS&gt;</code>. </li>
+<li>Config Map: <code>Not Need</code></li>
+</ol>
+<h3 id="secrets-screen_4"><a class="toclink" href="#secrets-screen_4">Secrets screen</a></h3>
+<ol>
+<li><code>Not Need</code></li>
+</ol>
+<h3 id="node-target-screen_4"><a class="toclink" href="#node-target-screen_4">Node target screen</a></h3>
+<ol>
+<li>Select <code>No modification</code></li>
+</ol>
+<h3 id="date-and-time-screen_4"><a class="toclink" href="#date-and-time-screen_4">Date and time screen</a></h3>
+<ol>
+<li><code>Deploy immediately</code></li>
+</ol>
+<h3 id="default-valuesyaml_4"><a class="toclink" href="#default-valuesyaml_4">default values.yaml</a></h3>
+<div class="highlight"><pre><span></span><code># This chart is used for initializing a GX store.
+# To initialize a GX store, first cold-start the GX store server,
+# and then cold-start the GX touchpoints.
+utils:
+
+  # The two available tasks are &quot;coldstart&quot; and &quot;snapshot&quot;
+  # A GX store workload must be successfully cold-started to be considered operational.
+  # After the GX 
+  task: &quot;coldstart&quot;
+
+  # runId can be used for re-triggering an already deployed workload.
+  # The runId will be embedded in the kubernetes job and pod name, ensuring a new job kicks in without needing to redeploy the workload.
+  runId: null
+
+  # Use node selector if you don&#39;t want to use edge labels.
+  # When using node selector, select the &quot;No modification&quot; option in the Node targeting dialog.
+  nodeSelector: 
+    node.ncr.com/hostname: &lt;HOSTNAME&gt;
+</code></pre></div>
+<h1 id="view-logs"><a class="toclink" href="#view-logs">View logs</a></h1>
+<ol>
+<li>In edge portal , enter your store name , e.g <code>gx-dev1</code>  </li>
+<li>From the top right screen select <code>View cluster logs</code>. </li>
+</ol>
+<p>In GCP <code>Logs Explorer</code> you can filter for emeraldgx application.  </p>
+<p>e.g - logs from all STORE namespace
+<div class="highlight"><pre><span></span><code>labels.cluster_edge_id=&lt;YOUR_CLUSTER_EDGE_ID&gt;
+resource.labels.namespace_name=&quot;gx-store&quot;
+</code></pre></div></p>
+<p>e.g - logs only from STORE selling pod
+<div class="highlight"><pre><span></span><code>labels.cluster_edge_id=&lt;YOUR_CLUSTER_EDGE_ID&gt;
+resource.labels.namespace_name=&quot;gx-store&quot;
+resource.labels.container_name=&quot;gx-selling&quot;
+</code></pre></div></p>
+<p>e.g - logs only from POS datasync pod
+<div class="highlight"><pre><span></span><code>labels.cluster_edge_id=&lt;YOUR_CLUSTER_EDGE_ID&gt;
+resource.labels.namespace_name=&quot;gx-pos&quot;
+resource.labels.container_name=&quot;gx-datasync&quot;
+</code></pre></div></p>
+<h1 id="common-commands-after-emeraldgx-deployment"><a class="toclink" href="#common-commands-after-emeraldgx-deployment">Common commands after <code>emeraldgx</code> deployment</a></h1>
+<p>e.g - ssh login to <code>Control Plan</code> edge store.  </p>
+<div class="highlight"><pre><span></span><code>gcloud compute ssh zylevel0@s4-master-1 --project=ret-edge-dsds-r10 --zone=europe-west2-c
+</code></pre></div>
+<p>e.g - get all gx-store workloads</p>
+<div class="highlight"><pre><span></span><code>kubectl -n gx-store get pod -o wide
+</code></pre></div>
+<p>e.g - get all gx-pos workloads</p>
+<div class="highlight"><pre><span></span><code>kubectl -n gx-pos get pod -o wide
+</code></pre></div>
+<p>e.g - get logs from gx-store</p>
+<div class="highlight"><pre><span></span><code>kubectl -n gx-store logs deploy/gx-selling -c gx-selling
+
+kubectl -n gx-store logs deploy/gx-datasync -c gx-datasync
+</code></pre></div>
+<p>e.g - get logs from gx-pos</p>
+<div class="highlight"><pre><span></span><code>kubectl -n gx-pos logs deploy/gx-selling -c gx-selling
+
+kubectl -n gx-pos logs deploy/gx-datasync -c gx-datasync
+</code></pre></div>
+<p>e.g - run coldstart on gx-store</p>
+<div class="highlight"><pre><span></span><code>kubectl -n gx-store exec deploy/gx-utils -c utils -- utils coldstart
+</code></pre></div>
+<p>e.g - run coldstart on gx-pos</p>
+<div class="highlight"><pre><span></span><code>kubectl -n gx-pos get po -o wide
+gx-utils-sxp7r      2/2     Running   0 100.127.88.54     s4-worker-1 = TP 1
+gx-utils-fvd57      2/2     Running   0 100.127.186.232   s4-worker-2 = TP 2
+etc..
+kubectl -n gx-pos exec pod/gx-utils-&lt;POD_HASH&gt; -c utils -- utils coldstart
+</code></pre></div>
+<p>e.g - invoke with sqlserver</p>
+<div class="highlight"><pre><span></span><code>GX-STORE  
+kubectl -n gx-store exec sqlserver-0 -c ms-sqlserver -it -- /bin/bash  
+
+GX-POS  
+kubectl -n gx-pos exec sqlserver-1-0 -c ms-sqlserver -it -- /bin/bash
+kubectl -n gx-pos exec sqlserver-2-0 -c ms-sqlserver -it -- /bin/bash
+kubectl -n gx-pos exec sqlserver-3-0 -c ms-sqlserver -it -- /bin/bash
+etc...  
+
+
+opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Qwe12345 -d retail -Q &quot;select * from ConfigurationEntry&quot; -Y 30
+
+
+opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Qwe12345 -d dms -Q &quot;select * from DMS_ContextData&quot; -Y 30
+
+opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Qwe12345 -d dms -Q &quot;select * from DMS_PhysicalToLogical&quot; -Y 30
+
+opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Qwe12345 -d dms -Q &quot;select * from DMS_ServersHierarchy&quot; -Y 30
+
+opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Qwe12345 -d dms -Q &quot;select * from DMS_ServerMonitoringInfo&quot; -Y 30
+</code></pre></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 29, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2024 Clement Tsang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.progress", "navigation.sections", "navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "toc.follow", "navigation.tracking", "search.share"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>

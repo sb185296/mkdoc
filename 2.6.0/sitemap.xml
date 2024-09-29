@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://clementtsang.github.io/bottom/stable/configuration/edge/</loc>
+         <lastmod>2024-09-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://clementtsang.github.io/bottom/stable/configuration/config-file/</loc>
          <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
