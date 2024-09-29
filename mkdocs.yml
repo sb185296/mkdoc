@@ -149,7 +149,12 @@ plugins:
   - mike:
       canonical_version: stable
   - git-revision-date-localized:
-      type: date
+      enable_creation_date: true
+      strict: true
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      strict: true
   - privacy
 
 extra:
