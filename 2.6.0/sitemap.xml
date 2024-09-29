@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://clementtsang.github.io/bottom/stable/configuration/bastion/</loc>
+         <lastmod>2024-09-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://clementtsang.github.io/bottom/stable/configuration/command-line-options/</loc>
          <lastmod>2024-09-29</lastmod>
          <changefreq>daily</changefreq>
