@@ -18,6 +18,10 @@ theme:
     code: IBM Plex Mono
   features:
     - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
     - navigation.expand
     - navigation.footer
     - navigation.indexes
@@ -30,6 +34,11 @@ theme:
     - search.suggest
     - toc.integrate
     - toc.follow
+    - navigation.tracking
+    - search.share
+
+
+  
   icon:
     edit: material/pencil
   palette:
@@ -60,7 +69,12 @@ extra_css:
 
 # Extensions
 markdown_extensions:
+  - abbr
   - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
   - attr_list
   - toc:
       anchorlink: true
@@ -139,6 +153,9 @@ plugins:
   - privacy
 
 extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
   # Versioning
   version:
     provider: mike
